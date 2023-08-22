@@ -1,9 +1,15 @@
 import streamlit as st
 import openai
 import random  # Import the random module
+import os  # Import the random module
+from dotenv import load_dotenv
 
-# Set your OpenAI API key here
-openai.api_key = "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"
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the API key from the environment variable
+api_key = os.getenv("OPENAI_API_KEY")
+
 
 # Add a logo image
 logo_image = "dd29fded-8d76-4f83-b3a9-ae38d43de7d3.png"  # Replace with your logo image path
